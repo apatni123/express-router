@@ -29,7 +29,7 @@ router.put("/:id", async (req,res) => {
     const update = await User.update(updatedData, {
         where: {id: id}
     })
-    res.json("User updated!")
+    res.send("User updated!")
 })
 
 
@@ -38,7 +38,7 @@ router.delete("/:id", async (req, res) => {
     const deleted = await User.destroy({
         where: { id: id }
     });
-    res.json('Deleted');    
+    res.send('Deleted');    
 });
 
 
